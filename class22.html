@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Javascript Objects and Its Properties</h2>
+        <p>There are two different ways to access an object property</p>
+        <p id="demo"></p>
+        <script>
+            // Create an object:
+            var person = {
+                firstName: "Amal",
+                age: "13",         
+               };
+               // Display some data from the object:
+               document.getElementById("demo").innerHTML = "Hello, I am " + person.firstName + ", I am " + person.age + " years old"
+               </script>
+
+
+        <h2>Built in Maths Objects in JS</h2>
+        <script>
+            document.write (Math.round(4.6)); // 5 (nearest integer)
+            document.write("<br>")
+            document.write (Math.floor(4.9)); // 4 (rounds down)
+            document.write("<br>")
+            document.write (Math.ceil(4.1)); // 5 (rounds up)
+            document.write("<br>")
+            document.write (Math.trunc(4.9)); // 4 (removes decimal part)
+        </script>
+
+
+        <h2>Argument Objects in JS</h2>
+        <p>Finding the largest number with help of Argument Objects</p>
+        <p id="result"></p>
+        <script>
+            function findMax() {
+                var i;
+                var max = 0;
+                for(i = 0; i < 3; i++) {
+                    if (arguments[i] > max) {
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            }
+            document.getElementById("result").innerHTML = findMax(4, 5, 6);
+        </script>
+    </body>
+</html>
