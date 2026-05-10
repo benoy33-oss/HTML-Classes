@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+        var student = {
+            name: "Tinu",
+            age: "6",
+            grade: "1",
+            hobbies: "Colouring",
+            fav_sport: "Cricket"
+        };
+        var color = ["white", "black", "blue", "pink", "red", "green"];
+        document.write("Student name is : " + student.name, "<br>", "Student favourite sport is : " + student.fav_sport);
+        document.write("<br>Before Poping the colors are: " + color.join("^"))
+        document.write("<br>My favourite color is : " + color[3]);
+        color.pop();
+        document.write("<br>After Poping the colors are : " + color.join("^"));
+        </script>
+    </body>
+</html>
