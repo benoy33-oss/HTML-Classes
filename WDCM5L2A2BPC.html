@@ -1,0 +1,65 @@
+<!--
+1) Start the HTML document with `<!DOCTYPE html>` and open `<html>`.
+
+2) Inside the `<body>`:
+   a) Add a heading `<h2>`: "JavaScript Class Inheritance".
+   b) Add paragraphs explaining:
+      - "extends" is used to inherit methods from another class.
+      - "super()" is used to call the parent class constructor.
+   c) Add an empty paragraph `<p id="details"></p>` to display the output.
+
+3) Add a `<script>` tag to write JavaScript.
+
+4) Create a parent class named `Car`:
+   a) Add a constructor that takes `brand` and stores it in `this.carname`.
+   b) Create a method `present()` that returns: "I have a " + carname.
+
+5) Create a child class named `Model` that extends `Car`:
+   a) Add a constructor with `brand` and `mod`.
+   b) Call `super(brand)` to initialize the parent class.
+   c) Store model name in `this.model`.
+
+6) Add a method `show()` in `Model`:
+   a) Return the full message using:
+      `this.present()` + ", it is a " + this.model
+
+7) Create an object:
+   a) `myCar = new Model("Ford", "Mustang")`
+
+8) Display the result on the page:
+   a) Use `document.getElementById("details").innerHTML = myCar.show();`
+
+9) Close all tags properly.
+-->
+<!DOCTYPE html>
+<html>
+   <head>
+
+   </head>
+   <body>
+      <h2>javascript Class Inheritance</h2>
+      <p>Use the "extends" keyword to inherit all methods from another class.</p>
+      <p id="details"></p>
+      <script>
+         class Car {
+            constructor(brand) {
+               this.carname= brand;
+            }
+            present() {
+               return "i have a " + this.carname;
+            }
+         }
+         class Model extends Car {
+            constructor(brand,mod) {
+            super(brand);
+            this.model = mod;
+            }
+            show() {
+               return this.present() + ", it is a " + this.model;
+            }
+         }
+         let myCar = new Model("Ford", "Mustang");
+         document.getElementById("details").innerHTML = myCar.show();
+      </script>
+   </body>
+</html>
