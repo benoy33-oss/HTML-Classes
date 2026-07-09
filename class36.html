@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body {
+           text-align: center;
+           font-family: Helvetica, sans-serif;
+           background-image: url("https://tse2.mm.bing.net/th/id/OIP.WlTnUYUaNX44ieiYZIAjAwHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3");
+           background-repeat: no-repeat;
+           background-size: cover;
+        }
+        #dice {
+            font-size: 320px;
+        }
+        #dice:hover {
+            cursor: pointer;
+        }
+        div {
+            padding-top: 5px
+        }
+        h1 {
+            padding-top: 25px
+        }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1>Rolling Dice</h1>
+        <h3>Click on dice to start and stop</h3>
+        <div id="dice" onclick="stopStart()"></div>
+        </center>
+        <script>
+            var dices = ["&#9856;", "&#9857;", "&#9858;", "&#9859;", "&#9860;", "&#9861;"];
+            var stopped = true;
+            function change() {
+                var random = Math.floor(Math.random() * 6);
+                dice.innerHTML = dices[random];
+            }
+            function stopStart() {
+                if (stopped) {
+                    stopped = false;
+                    t = setInterval(change, 100);
+                } else {
+                    clearInterval(t);
+                    stopped = true;
+                }
+            }
+            window.onload = function() {
+                dice = document.getElementById("dice");
+                stopStart();
+            }
+        </script>
+    </body>
+</html>
