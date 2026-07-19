@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+          section {
+             margin-top: 75px;
+          }
+       </style>
+    </head>
+    <body>
+        <center>
+        <section>
+            <img class="mySlides" src="https://images.pexels.com/photos/247478/pexels-photo-247478.jpeg?cs=srgb&dl=clouds-cloudy-conifers-247478.jpg&fm=jpg" style="height: 500px;">
+            <img class="mySlides" src="https://static.vecteezy.com/system/resources/previews/040/692/510/non_2x/ai-generated-tranquil-meadow-green-trees-sunset-sky-nature-serene-beauty-generated-by-ai-free-photo.jpg" style="height: 500px;">
+            <img class="mySlides" src="https://i.pinimg.com/originals/c9/1f/b8/c91fb819040d40b27965cad41a059a69.jpg" style="height: 500px;">
+            <img class="mySlides" src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Background-Beautiful-Nature-Images-HD.jpg" style="height: 500px;">
+        </section>
+        </center>
+        <script>
+            var myIndex = 0;
+            carousel();
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";              
+                 }
+                 myIndex++;
+                 if (myIndex > x.length) {myIndex = 1}
+                 x[myIndex-1].style.display = "block";
+                 setTimeout(carousel, 3000);
+            }
+        </script>
+    </body>
+</html>
